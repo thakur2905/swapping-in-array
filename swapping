@@ -1,0 +1,28 @@
+ import java.util.Scanner;
+ class Main {
+    public static void main(String[] args) {
+      int arr[] = new int[4];
+      int i,j;
+      Scanner scan=new Scanner(System.in);
+      for(i=0;i<arr.length;i++){
+          System.out.println("enter value:");
+          arr[i]=scan.nextInt();
+      }
+          System.out.println("array before swapping:");
+          for(i=0;i<4;i++)
+          System.out.println(""+arr[i]);
+          int mid=(0+arr.length-1)/2;
+          int t;
+          for(i=0,j=arr.length-1;i<=mid;i++,j--){
+              t=arr[i];
+              arr[i]=arr[j];
+              arr[j]=t;
+          }
+          
+        System.out.println("");
+        System.out.println("array after swapping:");
+        for(i=0;i<4;i++)
+        System.out.println(""+arr[i]);
+
+    }
+}
